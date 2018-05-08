@@ -1,0 +1,21 @@
+server:
+    port: 3001
+
+spring:
+  application:
+    name: ymu-hystrix-turbine
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka.ymu.com:2221/eureka/
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${server.port}
+    prefer-ip-address: true
+#    hostname: localhost
+
+info:
+  description: 监控数据聚合
+turbine:
+  app-config: service-fileclient
+  cluster-name-expression: "'default'"
