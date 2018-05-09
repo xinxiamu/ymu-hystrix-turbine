@@ -14,6 +14,21 @@ eureka:
     prefer-ip-address: true
 #    hostname: localhost
 
+#---
+#spring:
+#  cloud:
+#    config: #配置中心
+#      name: ${spring.application.name} #在配置仓库的配置名称
+#      profile: dev
+#      label: master
+#      fail-fast: true
+#      discovery:
+#        enabled: true
+#        service-id: ymu-config-server
+#      username: admin
+#      password: 123456
+
+---
 info:
   description: 监控数据聚合
 turbine:
